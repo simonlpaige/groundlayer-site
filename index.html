@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groundlayer - The Foundation Beneath Everything</title>
+    <meta name="description" content="Groundlayer LLC builds technology, community infrastructure, and automated systems that make essential services accessible to everyone.">
+    <link rel="canonical" href="https://groundlayer.co">
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --surface: #141414;
+            --border: #222;
+            --text: #e8e8e8;
+            --text-dim: #888;
+            --accent: #4a9eff;
+            --accent-hover: #6bb3ff;
+            --green: #34d399;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Grid background */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(74, 158, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(74, 158, 255, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Nav */
+        nav {
+            padding: 24px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav a.contact-link {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.2s;
+        }
+
+        nav a.contact-link:hover { color: var(--accent); }
+
+        /* Hero */
+        .hero {
+            padding: 120px 0 80px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 .dim { color: var(--text-dim); }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: var(--text-dim);
+            max-width: 540px;
+            line-height: 1.7;
+        }
+
+        /* Divider */
+        .divider {
+            height: 1px;
+            background: var(--border);
+            margin: 0;
+        }
+
+        /* What We Build */
+        .section {
+            padding: 64px 0;
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-dim);
+            margin-bottom: 32px;
+        }
+
+        .projects {
+            display: grid;
+            gap: 16px;
+        }
+
+        .project {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: all 0.2s;
+        }
+
+        .project:hover {
+            padding-left: 8px;
+        }
+
+        .project:hover .project-name { color: var(--accent); }
+
+        .project-name {
+            font-size: 1.125rem;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .project-type {
+            font-size: 0.875rem;
+            color: var(--text-dim);
+        }
+
+        .project-status {
+            display: inline-block;
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 12px;
+            background: rgba(52, 211, 153, 0.1);
+            color: var(--green);
+            border: 1px solid rgba(52, 211, 153, 0.2);
+            margin-left: 12px;
+        }
+
+        /* About */
+        .about-text {
+            font-size: 1rem;
+            color: var(--text-dim);
+            line-height: 1.8;
+            max-width: 600px;
+        }
+
+        .about-text strong { color: var(--text); font-weight: 600; }
+
+        /* Footer */
+        footer {
+            padding: 48px 0;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-left {
+            font-size: 0.8125rem;
+            color: var(--text-dim);
+        }
+
+        .footer-right {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-right a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.8125rem;
+            transition: color 0.2s;
+        }
+
+        .footer-right a:hover { color: var(--accent); }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            .hero { padding: 80px 0 60px; }
+            .project { flex-direction: column; gap: 4px; }
+            footer { flex-direction: column; align-items: flex-start; }
+        }
+    </style>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Groundlayer LLC",
+        "url": "https://groundlayer.co",
+        "description": "Technology, community infrastructure, and automated systems that make essential services accessible to everyone.",
+        "foundingDate": "2026-04-16",
+        "founder": {
+            "@type": "Person",
+            "name": "Simon Paige"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Kansas City",
+            "addressRegion": "MO",
+            "addressCountry": "US"
+        }
+    }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/" class="logo">ground<span>layer</span></a>
+            <a href="mailto:hello@groundlayer.co" class="contact-link">Contact</a>
+        </nav>
+
+        <section class="hero">
+            <h1>Build the layer <span class="dim">beneath everything.</span></h1>
+            <p>We build technology, community infrastructure, and automated systems that make essential services accessible to everyone. Based in Kansas City.</p>
+        </section>
+
+        <div class="divider"></div>
+
+        <section class="section">
+            <div class="section-label">What We Build</div>
+            <div class="projects">
+                <a href="https://simonlpaige.com" class="project" target="_blank" rel="noopener">
+                    <div>
+                        <span class="project-name">Web Design</span>
+                        <span class="project-status">Active</span>
+                    </div>
+                    <span class="project-type">Custom sites for small businesses</span>
+                </a>
+                <a href="https://rivaldrop.com" class="project" target="_blank" rel="noopener">
+                    <div>
+                        <span class="project-name">RivalDrop</span>
+                        <span class="project-status">Active</span>
+                    </div>
+                    <span class="project-type">Competitive intelligence platform</span>
+                </a>
+                <a href="https://waldonet.simonlpaige.com" class="project" target="_blank" rel="noopener">
+                    <div>
+                        <span class="project-name">WaldoNet</span>
+                        <span class="project-status">Active</span>
+                    </div>
+                    <span class="project-type">Community AI readiness</span>
+                </a>
+                <div class="project" style="cursor: default;">
+                    <div>
+                        <span class="project-name">Ecolibrium</span>
+                        <span class="project-status">Active</span>
+                    </div>
+                    <span class="project-type">Framework for the Effortless Economy</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <section class="section">
+            <div class="section-label">About</div>
+            <p class="about-text">
+                <strong>Groundlayer</strong> is a Kansas City technology company founded on a simple question: who benefits when machines do most of the work? We believe the answer should be everyone. Our projects span web development, SaaS, community tech literacy, and economic systems design - all pointed at the same goal: <strong>replacing costly necessities with automated, community-owned services.</strong>
+            </p>
+        </section>
+
+        <footer>
+            <div class="footer-left">&copy; 2026 Groundlayer LLC &middot; Kansas City, MO</div>
+            <div class="footer-right">
+                <a href="mailto:hello@groundlayer.co">Email</a>
+                <a href="https://github.com/simonlpaige" target="_blank" rel="noopener">GitHub</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
