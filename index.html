@@ -4,213 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Groundlayer - The Foundation Beneath Everything</title>
-    <meta name="description" content="Groundlayer LLC builds technology, community infrastructure, and automated systems that make essential services accessible to everyone.">
+    <meta name="description" content="Groundlayer LLC builds technology, community infrastructure, and automated systems that make essential services accessible to everyone. Based in Kansas City.">
     <link rel="canonical" href="https://groundlayer.co">
-    <style>
-        :root {
-            --bg: #0a0a0a;
-            --surface: #141414;
-            --border: #222;
-            --text: #e8e8e8;
-            --text-dim: #888;
-            --accent: #4a9eff;
-            --accent-hover: #6bb3ff;
-            --green: #34d399;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-            min-height: 100vh;
-        }
-
-        /* Grid background */
-        body::before {
-            content: '';
-            position: fixed;
-            inset: 0;
-            background-image:
-                linear-gradient(rgba(74, 158, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(74, 158, 255, 0.03) 1px, transparent 1px);
-            background-size: 60px 60px;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 24px;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Nav */
-        nav {
-            padding: 24px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.25rem;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            color: var(--text);
-            text-decoration: none;
-        }
-
-        .logo span {
-            color: var(--accent);
-        }
-
-        nav a.contact-link {
-            color: var(--text-dim);
-            text-decoration: none;
-            font-size: 0.875rem;
-            transition: color 0.2s;
-        }
-
-        nav a.contact-link:hover { color: var(--accent); }
-
-        /* Hero */
-        .hero {
-            padding: 120px 0 80px;
-        }
-
-        .hero h1 {
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: 800;
-            letter-spacing: -0.03em;
-            line-height: 1.1;
-            margin-bottom: 24px;
-        }
-
-        .hero h1 .dim { color: var(--text-dim); }
-
-        .hero p {
-            font-size: 1.125rem;
-            color: var(--text-dim);
-            max-width: 540px;
-            line-height: 1.7;
-        }
-
-        /* Divider */
-        .divider {
-            height: 1px;
-            background: var(--border);
-            margin: 0;
-        }
-
-        /* What We Build */
-        .section {
-            padding: 64px 0;
-        }
-
-        .section-label {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--text-dim);
-            margin-bottom: 32px;
-        }
-
-        .projects {
-            display: grid;
-            gap: 16px;
-        }
-
-        .project {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            padding: 20px 0;
-            border-bottom: 1px solid var(--border);
-            text-decoration: none;
-            color: var(--text);
-            transition: all 0.2s;
-        }
-
-        .project:hover {
-            padding-left: 8px;
-        }
-
-        .project:hover .project-name { color: var(--accent); }
-
-        .project-name {
-            font-size: 1.125rem;
-            font-weight: 600;
-            transition: color 0.2s;
-        }
-
-        .project-type {
-            font-size: 0.875rem;
-            color: var(--text-dim);
-        }
-
-        .project-status {
-            display: inline-block;
-            font-size: 0.7rem;
-            padding: 2px 8px;
-            border-radius: 12px;
-            background: rgba(52, 211, 153, 0.1);
-            color: var(--green);
-            border: 1px solid rgba(52, 211, 153, 0.2);
-            margin-left: 12px;
-        }
-
-        /* About */
-        .about-text {
-            font-size: 1rem;
-            color: var(--text-dim);
-            line-height: 1.8;
-            max-width: 600px;
-        }
-
-        .about-text strong { color: var(--text); font-weight: 600; }
-
-        /* Footer */
-        footer {
-            padding: 48px 0;
-            border-top: 1px solid var(--border);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 16px;
-        }
-
-        .footer-left {
-            font-size: 0.8125rem;
-            color: var(--text-dim);
-        }
-
-        .footer-right {
-            display: flex;
-            gap: 24px;
-        }
-
-        .footer-right a {
-            color: var(--text-dim);
-            text-decoration: none;
-            font-size: 0.8125rem;
-            transition: color 0.2s;
-        }
-
-        .footer-right a:hover { color: var(--accent); }
-
-        /* Mobile */
-        @media (max-width: 600px) {
-            .hero { padding: 80px 0 60px; }
-            .project { flex-direction: column; gap: 4px; }
-            footer { flex-direction: column; align-items: flex-start; }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -233,71 +29,397 @@
         }
     }
     </script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --black: #0a0a0a;
+            --white: #f5f2ee;
+            --steel: #1c2b3a;
+            --accent: #6ee7b7;
+            --accent-dim: #34d399;
+            --accent-glow: rgba(110, 231, 183, 0.12);
+            --gray: #8a9aaa;
+            --rule: rgba(255,255,255,0.08);
+            --card-bg: #111318;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--black);
+            color: var(--white);
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 300;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 999;
+            opacity: 0.4;
+        }
+
+        /* NAV */
+        .topnav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 48px;
+            background: rgba(10,10,10,0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .topnav-brand {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 24px;
+            letter-spacing: 0.05em;
+            color: var(--white);
+            text-decoration: none;
+        }
+        .topnav-brand span { color: var(--accent); }
+
+        .topnav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+
+        .topnav-links a {
+            font-family: 'DM Mono', monospace;
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--gray);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .topnav-links a:hover { color: var(--accent); }
+
+        .topnav-links .btn-nav {
+            background: var(--accent);
+            color: var(--black);
+            padding: 10px 20px;
+            font-weight: 600;
+            border-radius: 4px;
+        }
+        .topnav-links .btn-nav:hover { background: var(--accent-dim); color: var(--black); }
+
+        /* HERO */
+        .hero {
+            padding: 160px 48px 100px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .hero-tag {
+            font-family: 'DM Mono', monospace;
+            font-size: 11px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(48px, 7vw, 96px);
+            line-height: 0.95;
+            color: var(--white);
+            margin-bottom: 24px;
+        }
+        .hero h1 span { color: var(--accent); }
+
+        .hero-sub {
+            font-size: 18px;
+            color: var(--gray);
+            max-width: 600px;
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--black);
+            padding: 16px 36px;
+            font-family: 'DM Mono', monospace;
+            font-size: 12px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+            border-radius: 4px;
+        }
+        .btn-primary:hover { background: var(--accent-dim); }
+
+        .btn-secondary {
+            border: 1px solid var(--rule);
+            color: var(--gray);
+            padding: 16px 36px;
+            font-family: 'DM Mono', monospace;
+            font-size: 12px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: border-color 0.2s, color 0.2s;
+            border-radius: 4px;
+        }
+        .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+
+        /* SECTION SHARED */
+        .section-label {
+            font-family: 'DM Mono', monospace;
+            font-size: 10px;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 40px;
+        }
+
+        .section {
+            padding: 80px 48px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-dark {
+            background: var(--steel);
+            padding: 80px 48px;
+        }
+
+        .section-dark-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* PROJECTS GRID */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2px;
+            background: var(--rule);
+        }
+
+        .project-card {
+            background: var(--black);
+            padding: 40px 36px;
+            text-decoration: none;
+            color: var(--white);
+            transition: background 0.2s;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .project-card:hover { background: #0f0f0f; }
+        .project-card.static { cursor: default; }
+        .project-card.static:hover { background: var(--black); }
+
+        .project-name {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 28px;
+            letter-spacing: 0.03em;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .project-card:hover .project-name { color: var(--accent); }
+        .project-card.static .project-name { color: var(--white); }
+
+        .project-status {
+            display: inline-block;
+            font-size: 0.65rem;
+            padding: 2px 8px;
+            border-radius: 12px;
+            background: rgba(110, 231, 183, 0.1);
+            color: var(--accent);
+            border: 1px solid rgba(110, 231, 183, 0.2);
+            font-family: 'DM Mono', monospace;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            vertical-align: middle;
+        }
+
+        .project-type {
+            font-family: 'DM Mono', monospace;
+            font-size: 10px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent);
+        }
+
+        .project-desc {
+            font-size: 14px;
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        /* ABOUT */
+        .about-text {
+            font-size: 1rem;
+            color: var(--gray);
+            line-height: 1.8;
+            max-width: 680px;
+        }
+        .about-text strong { color: var(--white); font-weight: 600; }
+
+        /* FOOTER */
+        footer {
+            padding: 32px 48px;
+            border-top: 1px solid var(--rule);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        footer p {
+            font-family: 'DM Mono', monospace;
+            font-size: 10px;
+            letter-spacing: 0.15em;
+            color: var(--gray);
+            text-transform: uppercase;
+        }
+
+        footer a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        footer a:hover { color: var(--accent); }
+
+        /* FADE IN */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .topnav { padding: 16px 20px; }
+            .topnav-links { gap: 14px; }
+            .topnav-links .hide-mobile { display: none; }
+            .hero { padding: 120px 20px 60px; }
+            .hero-sub { font-size: 16px; }
+            .section { padding: 60px 20px; }
+            .section-dark { padding: 60px 20px; }
+            .projects { grid-template-columns: 1fr; }
+            footer { flex-direction: column; align-items: flex-start; padding: 24px 20px; }
+        }
+
+        @media (max-width: 600px) {
+            .hero { padding: 100px 16px 48px; }
+            .section { padding: 48px 16px; }
+            .section-dark { padding: 48px 16px; }
+            .hero-btns { flex-direction: column; }
+            .hero-btns a { text-align: center; }
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <nav>
-            <a href="/" class="logo">ground<span>layer</span></a>
-            <a href="mailto:hello@groundlayer.co" class="contact-link">Contact</a>
-        </nav>
 
-        <section class="hero">
-            <h1>Build the layer <span class="dim">beneath everything.</span></h1>
-            <p>We build technology, community infrastructure, and automated systems that make essential services accessible to everyone. Based in Kansas City.</p>
-        </section>
+    <!-- NAV -->
+    <nav class="topnav" role="navigation" aria-label="Main navigation">
+        <a href="/" class="topnav-brand">Ground<span>layer</span></a>
+        <div class="topnav-links">
+            <a href="/plans" class="hide-mobile">Web Design</a>
+            <a href="https://rivaldrop.com" target="_blank" rel="noopener" class="hide-mobile">RivalDrop</a>
+            <a href="mailto:hello@groundlayer.co" class="btn-nav">Contact</a>
+        </div>
+    </nav>
 
-        <div class="divider"></div>
+    <!-- HERO -->
+    <div class="hero fade-in">
+        <div class="hero-tag">Kansas City, MO</div>
+        <h1>Build the layer<br/><span>beneath everything.</span></h1>
+        <p class="hero-sub">We build technology, community infrastructure, and automated systems that make essential services accessible to everyone.</p>
+        <div class="hero-btns">
+            <a href="/plans" class="btn-primary">Web Design Plans</a>
+            <a href="mailto:hello@groundlayer.co" class="btn-secondary">Get in Touch</a>
+        </div>
+    </div>
 
-        <section class="section">
-            <div class="section-label">What We Build</div>
-            <div class="projects">
-                <a href="https://simonlpaige.com" class="project" target="_blank" rel="noopener">
-                    <div>
-                        <span class="project-name">Web Design</span>
-                        <span class="project-status">Active</span>
-                    </div>
-                    <span class="project-type">Custom sites for small businesses</span>
+    <!-- PROJECTS -->
+    <div class="section-dark">
+        <div class="section-dark-inner">
+            <div class="section-label">// What We Build</div>
+            <div class="projects fade-in">
+                <a href="/plans" class="project-card">
+                    <div class="project-name">Web Design <span class="project-status">Active</span></div>
+                    <div class="project-type">Service</div>
+                    <p class="project-desc">Custom websites for KC small businesses. No templates. Starts at $399 - way under agency prices.</p>
                 </a>
-                <a href="https://rivaldrop.com" class="project" target="_blank" rel="noopener">
-                    <div>
-                        <span class="project-name">RivalDrop</span>
-                        <span class="project-status">Active</span>
-                    </div>
-                    <span class="project-type">Competitive intelligence platform</span>
+                <a href="https://rivaldrop.com" class="project-card" target="_blank" rel="noopener">
+                    <div class="project-name">RivalDrop <span class="project-status">Active</span></div>
+                    <div class="project-type">SaaS Platform</div>
+                    <p class="project-desc">Competitive intelligence for local businesses. Know what competitors charge, rank, and advertise.</p>
                 </a>
-                <a href="https://waldonet.simonlpaige.com" class="project" target="_blank" rel="noopener">
-                    <div>
-                        <span class="project-name">WaldoNet</span>
-                        <span class="project-status">Active</span>
-                    </div>
-                    <span class="project-type">Community AI readiness</span>
+                <a href="https://waldonet.simonlpaige.com" class="project-card" target="_blank" rel="noopener">
+                    <div class="project-name">WaldoNet <span class="project-status">Active</span></div>
+                    <div class="project-type">Community Tech</div>
+                    <p class="project-desc">Community AI readiness - bringing technology literacy and access to Kansas City neighborhoods.</p>
                 </a>
-                <div class="project" style="cursor: default;">
-                    <div>
-                        <span class="project-name">Ecolibrium</span>
-                        <span class="project-status">Active</span>
-                    </div>
-                    <span class="project-type">Framework for the Effortless Economy</span>
+                <div class="project-card static">
+                    <div class="project-name">Ecolibrium <span class="project-status">Active</span></div>
+                    <div class="project-type">Economic Systems</div>
+                    <p class="project-desc">Framework for the Effortless Economy - replacing costly necessities with automated, community-owned services.</p>
                 </div>
             </div>
-        </section>
-
-        <div class="divider"></div>
-
-        <section class="section">
-            <div class="section-label">About</div>
-            <p class="about-text">
-                <strong>Groundlayer</strong> is a Kansas City technology company founded on a simple question: who benefits when machines do most of the work? We believe the answer should be everyone. Our projects span web development, SaaS, community tech literacy, and economic systems design - all pointed at the same goal: <strong>replacing costly necessities with automated, community-owned services.</strong>
-            </p>
-        </section>
-
-        <footer>
-            <div class="footer-left">&copy; 2026 Groundlayer LLC &middot; Kansas City, MO</div>
-            <div class="footer-right">
-                <a href="mailto:hello@groundlayer.co">Email</a>
-                <a href="https://github.com/simonlpaige" target="_blank" rel="noopener">GitHub</a>
-            </div>
-        </footer>
+        </div>
     </div>
+
+    <!-- ABOUT -->
+    <div class="section">
+        <div class="section-label">// About</div>
+        <p class="about-text fade-in">
+            <strong>Groundlayer LLC</strong> is a Kansas City technology company founded on a simple question: who benefits when machines do most of the work? We believe the answer should be everyone. Our projects span web development, SaaS, community tech literacy, and economic systems design - all pointed at the same goal: <strong>replacing costly necessities with automated, community-owned services.</strong>
+        </p>
+        <p class="about-text fade-in" style="margin-top: 20px;">
+            Founded by <a href="https://simonlpaige.com" style="color: var(--accent); text-decoration: none;">Simon Paige</a>, based in Waldo, Kansas City MO.
+        </p>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Groundlayer LLC &middot; Kansas City, MO</p>
+        <p>
+            <a href="mailto:hello@groundlayer.co">Email</a> &nbsp;&middot;&nbsp;
+            <a href="https://github.com/simonlpaige" target="_blank" rel="noopener">GitHub</a> &nbsp;&middot;&nbsp;
+            <a href="/terms">Terms</a> &nbsp;&middot;&nbsp;
+            <a href="/privacy">Privacy</a>
+        </p>
+    </footer>
+
+    <script>
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+    </script>
+
 </body>
 </html>
