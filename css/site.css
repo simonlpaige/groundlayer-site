@@ -1,0 +1,331 @@
+/* Groundlayer LLC - site.css
+   Bedrock flavor. Typography-first. Most restrained brand in the family.
+   Family law: no gradients, no rounded buttons >8px, Inter body, 1.250 scale. */
+
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Tokens ── */
+:root {
+  --ink: #1A1A1A;
+  --paper: #F7F5F2;
+  --secondary: #4A4A4A;
+  --rule: #C8C5C0;
+  --success: #2E7D52;
+  --error: #B03030;
+
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+  --base: 1rem;            /* 16px */
+  --scale: 1.25;           /* Major Third */
+  --line-height: 1.65;
+  --max-width: 960px;
+  --max-line: 62ch;
+  --radius: 0px;           /* Groundlayer: structural, no rounding */
+  --space-unit: 4px;
+}
+
+/* ── Type scale (Major Third 1.250) ── */
+:root {
+  --step-0: 1rem;          /* 16px */
+  --step-1: 1.125rem;      /* 18px - subhead */
+  --step-2: 1.25rem;       /* 20px */
+  --step-3: 1.563rem;      /* 25px */
+  --step-4: 1.953rem;      /* ~31px */
+  --step-5: 2.441rem;      /* ~39px - hero heading */
+}
+
+/* ── Base ── */
+html {
+  font-size: var(--base);
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: var(--line-height);
+  color: var(--ink);
+  background-color: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Layout ── */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── Links ── */
+a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: var(--secondary);
+}
+
+/* ── Focus (family law: 2px ring, always visible) ── */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+/* ── Horizon rules ── */
+hr {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 0;
+}
+
+/* ── Header ── */
+.site-header {
+  padding: 48px 0 0;
+}
+
+.site-header .logo {
+  display: block;
+  max-width: 240px;
+  height: auto;
+}
+
+/* ── Hero ── */
+.hero {
+  padding: 48px 0;
+}
+
+.hero h1 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: var(--step-5);
+  line-height: 1.15;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: var(--step-1);
+  max-width: var(--max-line);
+  color: var(--secondary);
+}
+
+/* ── Child brands ── */
+.brands {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0;
+  padding: 48px 0;
+}
+
+.brand-item {
+  padding: 24px 24px 24px 0;
+  border-right: 1px solid var(--rule);
+}
+
+.brand-item:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+.brand-item:first-child {
+  padding-left: 0;
+}
+
+.brand-item h2 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: var(--step-2);
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+.brand-item p {
+  font-size: var(--step-0);
+  color: var(--secondary);
+  max-width: var(--max-line);
+  margin-bottom: 12px;
+}
+
+.brand-item a {
+  font-size: var(--step-0);
+  color: var(--ink);
+}
+
+/* ── About ── */
+.about {
+  padding: 48px 0;
+}
+
+.about p {
+  max-width: var(--max-line);
+  color: var(--secondary);
+}
+
+/* ── Contact ── */
+.contact {
+  padding: 48px 0;
+}
+
+.contact p {
+  max-width: var(--max-line);
+  color: var(--secondary);
+}
+
+.contact a {
+  color: var(--ink);
+}
+
+/* ── Footer ── */
+.site-footer {
+  padding: 32px 0 48px;
+}
+
+.site-footer p {
+  font-size: 0.875rem;
+  color: var(--secondary);
+}
+
+.site-footer a {
+  color: var(--secondary);
+}
+
+.site-footer a:hover {
+  color: var(--ink);
+}
+
+/* ── Legal pages (privacy, terms) ── */
+.legal-page {
+  padding: 48px 0 64px;
+}
+
+.legal-page h1 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: var(--step-4);
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.legal-page .last-updated {
+  font-size: 0.875rem;
+  color: var(--secondary);
+  margin-bottom: 48px;
+}
+
+.legal-page h2 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: var(--step-2);
+  margin-top: 40px;
+  margin-bottom: 12px;
+}
+
+.legal-page p,
+.legal-page li {
+  max-width: var(--max-line);
+  color: var(--secondary);
+  margin-bottom: 12px;
+}
+
+.legal-page ul {
+  padding-left: 20px;
+  margin-bottom: 12px;
+}
+
+.legal-page li {
+  margin-bottom: 6px;
+}
+
+.legal-page a {
+  color: var(--ink);
+}
+
+.legal-back {
+  display: inline-block;
+  margin-bottom: 32px;
+  font-size: 0.875rem;
+  color: var(--secondary);
+}
+
+.legal-back:hover {
+  color: var(--ink);
+}
+
+/* ── Responsive ── */
+@media (max-width: 720px) {
+  .brands {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-item {
+    padding: 24px 0;
+    border-right: none;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .brand-item:last-child {
+    border-bottom: none;
+  }
+
+  .hero h1 {
+    font-size: var(--step-4);
+  }
+}
+
+/* ── Print ── */
+@media print {
+  body {
+    color: #000;
+    background: #fff;
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #555;
+  }
+
+  a[href^="#"]::after,
+  a[href^="mailto:"]::after {
+    content: "";
+  }
+
+  hr {
+    border-top-color: #999;
+  }
+
+  .site-header,
+  .site-footer {
+    padding: 12px 0;
+  }
+}

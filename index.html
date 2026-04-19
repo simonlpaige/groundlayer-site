@@ -1,425 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Groundlayer - The Foundation Beneath Everything</title>
-    <meta name="description" content="Groundlayer LLC builds technology, community infrastructure, and automated systems that make essential services accessible to everyone. Based in Kansas City.">
-    <link rel="canonical" href="https://groundlayer.co">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Groundlayer LLC",
-        "url": "https://groundlayer.co",
-        "description": "Technology, community infrastructure, and automated systems that make essential services accessible to everyone.",
-        "foundingDate": "2026-04-16",
-        "founder": {
-            "@type": "Person",
-            "name": "Simon Paige"
-        },
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Kansas City",
-            "addressRegion": "MO",
-            "addressCountry": "US"
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Groundlayer LLC</title>
+  <meta name="description" content="Groundlayer LLC is a Missouri holding company. Its brands build websites, competitive intelligence tools, and software replacements for Kansas City small businesses.">
+  <link rel="canonical" href="https://groundlayer.co">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/site.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Groundlayer LLC",
+    "url": "https://groundlayer.co",
+    "description": "Missouri holding company for Simon L. Paige Web Design, RivalDrop, and Anvilshare.",
+    "foundingDate": "2026-04",
+    "founder": {
+      "@type": "Person",
+      "name": "Simon L. Paige"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kansas City",
+      "addressRegion": "MO",
+      "addressCountry": "US"
     }
-    </script>
-
-    <style>
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-        :root {
-            --black: #0a0a0a;
-            --white: #f5f2ee;
-            --steel: #1c2b3a;
-            --accent: #6ee7b7;
-            --accent-dim: #34d399;
-            --accent-glow: rgba(110, 231, 183, 0.12);
-            --gray: #8a9aaa;
-            --rule: rgba(255,255,255,0.08);
-            --card-bg: #111318;
-        }
-
-        html { scroll-behavior: smooth; }
-
-        body {
-            background: var(--black);
-            color: var(--white);
-            font-family: 'DM Sans', sans-serif;
-            font-weight: 300;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        body::before {
-            content: '';
-            position: fixed;
-            inset: 0;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-            pointer-events: none;
-            z-index: 999;
-            opacity: 0.4;
-        }
-
-        /* NAV */
-        .topnav {
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            z-index: 100;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 48px;
-            background: rgba(10,10,10,0.85);
-            backdrop-filter: blur(16px);
-            border-bottom: 1px solid var(--rule);
-        }
-
-        .topnav-brand {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 24px;
-            letter-spacing: 0.05em;
-            color: var(--white);
-            text-decoration: none;
-        }
-        .topnav-brand span { color: var(--accent); }
-
-        .topnav-links {
-            display: flex;
-            gap: 28px;
-            align-items: center;
-        }
-
-        .topnav-links a {
-            font-family: 'DM Mono', monospace;
-            font-size: 11px;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--gray);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        .topnav-links a:hover { color: var(--accent); }
-
-        .topnav-links .btn-nav {
-            background: var(--accent);
-            color: var(--black);
-            padding: 10px 20px;
-            font-weight: 600;
-            border-radius: 4px;
-        }
-        .topnav-links .btn-nav:hover { background: var(--accent-dim); color: var(--black); }
-
-        /* HERO */
-        .hero {
-            padding: 160px 48px 100px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .hero-tag {
-            font-family: 'DM Mono', monospace;
-            font-size: 11px;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 24px;
-        }
-
-        .hero h1 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(48px, 7vw, 96px);
-            line-height: 0.95;
-            color: var(--white);
-            margin-bottom: 24px;
-        }
-        .hero h1 span { color: var(--accent); }
-
-        .hero-sub {
-            font-size: 18px;
-            color: var(--gray);
-            max-width: 600px;
-            line-height: 1.7;
-            margin-bottom: 40px;
-        }
-
-        .hero-btns {
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-
-        .btn-primary {
-            background: var(--accent);
-            color: var(--black);
-            padding: 16px 36px;
-            font-family: 'DM Mono', monospace;
-            font-size: 12px;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.2s;
-            border-radius: 4px;
-        }
-        .btn-primary:hover { background: var(--accent-dim); }
-
-        .btn-secondary {
-            border: 1px solid var(--rule);
-            color: var(--gray);
-            padding: 16px 36px;
-            font-family: 'DM Mono', monospace;
-            font-size: 12px;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            text-decoration: none;
-            transition: border-color 0.2s, color 0.2s;
-            border-radius: 4px;
-        }
-        .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
-
-        /* SECTION SHARED */
-        .section-label {
-            font-family: 'DM Mono', monospace;
-            font-size: 10px;
-            letter-spacing: 0.25em;
-            text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 40px;
-        }
-
-        .section {
-            padding: 80px 48px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .section-dark {
-            background: var(--steel);
-            padding: 80px 48px;
-        }
-
-        .section-dark-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        /* PROJECTS GRID */
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2px;
-            background: var(--rule);
-        }
-
-        .project-card {
-            background: var(--black);
-            padding: 40px 36px;
-            text-decoration: none;
-            color: var(--white);
-            transition: background 0.2s;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .project-card:hover { background: #0f0f0f; }
-        .project-card.static { cursor: default; }
-        .project-card.static:hover { background: var(--black); }
-
-        .project-name {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 28px;
-            letter-spacing: 0.03em;
-            color: var(--white);
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .project-card:hover .project-name { color: var(--accent); }
-        .project-card.static .project-name { color: var(--white); }
-
-        .project-status {
-            display: inline-block;
-            font-size: 0.65rem;
-            padding: 2px 8px;
-            border-radius: 12px;
-            background: rgba(110, 231, 183, 0.1);
-            color: var(--accent);
-            border: 1px solid rgba(110, 231, 183, 0.2);
-            font-family: 'DM Mono', monospace;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            vertical-align: middle;
-        }
-
-        .project-type {
-            font-family: 'DM Mono', monospace;
-            font-size: 10px;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--accent);
-        }
-
-        .project-desc {
-            font-size: 14px;
-            color: var(--gray);
-            line-height: 1.6;
-        }
-
-        /* ABOUT */
-        .about-text {
-            font-size: 1rem;
-            color: var(--gray);
-            line-height: 1.8;
-            max-width: 680px;
-        }
-        .about-text strong { color: var(--white); font-weight: 600; }
-
-        /* FOOTER */
-        footer {
-            padding: 32px 48px;
-            border-top: 1px solid var(--rule);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 16px;
-        }
-
-        footer p {
-            font-family: 'DM Mono', monospace;
-            font-size: 10px;
-            letter-spacing: 0.15em;
-            color: var(--gray);
-            text-transform: uppercase;
-        }
-
-        footer a {
-            color: var(--gray);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        footer a:hover { color: var(--accent); }
-
-        /* FADE IN */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 900px) {
-            .topnav { padding: 16px 20px; }
-            .topnav-links { gap: 14px; }
-            .topnav-links .hide-mobile { display: none; }
-            .hero { padding: 120px 20px 60px; }
-            .hero-sub { font-size: 16px; }
-            .section { padding: 60px 20px; }
-            .section-dark { padding: 60px 20px; }
-            .projects { grid-template-columns: 1fr; }
-            footer { flex-direction: column; align-items: flex-start; padding: 24px 20px; }
-        }
-
-        @media (max-width: 600px) {
-            .hero { padding: 100px 16px 48px; }
-            .section { padding: 48px 16px; }
-            .section-dark { padding: 48px 16px; }
-            .hero-btns { flex-direction: column; }
-            .hero-btns a { text-align: center; }
-        }
-    </style>
+  }
+  </script>
 </head>
 <body>
 
-    <!-- NAV -->
-    <nav class="topnav" role="navigation" aria-label="Main navigation">
-        <a href="/" class="topnav-brand">Ground<span>layer</span></a>
-        <div class="topnav-links">
-            <a href="/plans" class="hide-mobile">Web Design</a>
-            <a href="https://rivaldrop.com" target="_blank" rel="noopener" class="hide-mobile">RivalDrop</a>
-            <a href="mailto:hello@groundlayer.co" class="btn-nav">Contact</a>
-        </div>
-    </nav>
+  <div class="container">
 
-    <!-- HERO -->
-    <div class="hero fade-in">
-        <div class="hero-tag">Kansas City, MO</div>
-        <h1>Build the layer<br/><span>beneath everything.</span></h1>
-        <p class="hero-sub">We build technology, community infrastructure, and automated systems that make essential services accessible to everyone.</p>
-        <div class="hero-btns">
-            <a href="/plans" class="btn-primary">Web Design Plans</a>
-            <a href="mailto:hello@groundlayer.co" class="btn-secondary">Get in Touch</a>
-        </div>
-    </div>
+    <header class="site-header">
+      <img src="/assets/logo.svg" alt="Groundlayer" class="logo" width="240" height="60">
+    </header>
 
-    <!-- PROJECTS -->
-    <div class="section-dark">
-        <div class="section-dark-inner">
-            <div class="section-label">// What We Build</div>
-            <div class="projects fade-in">
-                <a href="/plans" class="project-card">
-                    <div class="project-name">Web Design <span class="project-status">Active</span></div>
-                    <div class="project-type">Service</div>
-                    <p class="project-desc">Custom websites for KC small businesses. No templates. Starts at $399 - way under agency prices.</p>
-                </a>
-                <a href="https://rivaldrop.com" class="project-card" target="_blank" rel="noopener">
-                    <div class="project-name">RivalDrop <span class="project-status">Active</span></div>
-                    <div class="project-type">SaaS Platform</div>
-                    <p class="project-desc">Competitive intelligence for local businesses. Know what competitors charge, rank, and advertise.</p>
-                </a>
-                <a href="https://waldonet.simonlpaige.com" class="project-card" target="_blank" rel="noopener">
-                    <div class="project-name">WaldoNet <span class="project-status">Active</span></div>
-                    <div class="project-type">Community Tech</div>
-                    <p class="project-desc">Community AI readiness - bringing technology literacy and access to Kansas City neighborhoods.</p>
-                </a>
-                <div class="project-card static">
-                    <div class="project-name">Ecolibrium <span class="project-status">Active</span></div>
-                    <div class="project-type">Economic Systems</div>
-                    <p class="project-desc">Framework for the Effortless Economy - replacing costly necessities with automated, community-owned services.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <hr>
 
-    <!-- ABOUT -->
-    <div class="section">
-        <div class="section-label">// About</div>
-        <p class="about-text fade-in">
-            <strong>Groundlayer LLC</strong> is a Kansas City technology company founded on a simple question: who benefits when machines do most of the work? We believe the answer should be everyone. Our projects span web development, SaaS, community tech literacy, and economic systems design - all pointed at the same goal: <strong>replacing costly necessities with automated, community-owned services.</strong>
-        </p>
-        <p class="about-text fade-in" style="margin-top: 20px;">
-            Founded by <a href="https://simonlpaige.com" style="color: var(--accent); text-decoration: none;">Simon Paige</a>, based in Waldo, Kansas City MO.
-        </p>
-    </div>
+    <section class="hero">
+      <h1>Groundlayer LLC</h1>
+      <p>Groundlayer LLC is a Missouri holding company. Its brands build websites, competitive intelligence tools, and software replacements for Kansas City small businesses.</p>
+    </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2026 Groundlayer LLC &middot; Kansas City, MO</p>
-        <p>
-            <a href="mailto:hello@groundlayer.co">Email</a> &nbsp;&middot;&nbsp;
-            <a href="https://github.com/simonlpaige" target="_blank" rel="noopener">GitHub</a> &nbsp;&middot;&nbsp;
-            <a href="/terms">Terms</a> &nbsp;&middot;&nbsp;
-            <a href="/privacy">Privacy</a>
-        </p>
+    <hr>
+
+    <section class="brands">
+      <div class="brand-item">
+        <h2>Simon L. Paige Web Design</h2>
+        <p>Custom websites for KC small businesses. Starting at $399.</p>
+        <a href="https://simonlpaige.com">simonlpaige.com</a>
+      </div>
+      <div class="brand-item">
+        <h2>RivalDrop</h2>
+        <p>Competitive intelligence for Shopify merchants and KC local businesses.</p>
+        <a href="https://rivaldrop.com">rivaldrop.com</a>
+      </div>
+      <div class="brand-item">
+        <h2>Anvilshare</h2>
+        <p>Software replacement studio. Replaces expensive SaaS with AI-native alternatives on customer-owned hardware.</p>
+        <a href="https://anvilshare.ai">anvilshare.ai</a>
+      </div>
+    </section>
+
+    <hr>
+
+    <section class="about">
+      <p>Groundlayer LLC is a single-member Missouri LLC founded in April 2026 by Simon L. Paige. It holds the intellectual property, contracts, and billing infrastructure for Simon L. Paige Web Design, RivalDrop, and Anvilshare. It does not sell directly to consumers.</p>
+    </section>
+
+    <hr>
+
+    <section class="contact">
+      <p>Legal and business inquiries: <a href="mailto:simon@groundlayer.co">simon@groundlayer.co</a></p>
+    </section>
+
+    <hr>
+
+    <footer class="site-footer">
+      <p>Groundlayer LLC, a Missouri limited liability company. Sole member: Simon L. Paige. <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></p>
     </footer>
 
-    <script>
-        const obs = new IntersectionObserver((entries) => {
-            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
-    </script>
+  </div>
 
 </body>
 </html>
