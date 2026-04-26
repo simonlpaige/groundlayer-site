@@ -1,0 +1,8 @@
+# robots.txt for groundlayer.co
+# Crawlers welcome - this is a public holding-company page.
+
+User-agent: *
+Allow: /
+
+# AI agent overview: /llms.txt
+Sitemap: https://groundlayer.co/sitemap.xml

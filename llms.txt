@@ -1,0 +1,27 @@
+# Groundlayer LLC
+
+> Missouri holding company. Owns and operates four brands serving Kansas City small businesses: a web-design studio, a competitive-intelligence tool, a software-replacement studio, and the parent brand itself.
+
+## What we are
+Groundlayer LLC is a single-member Missouri limited liability company founded April 2026. The company itself does not sell services to end customers - it owns the brands that do.
+
+## Operating brands (DBAs)
+- **Simon L. Paige Web Design** - websites for Kansas City small businesses. https://simonlpaige.com
+- **RivalDrop** - competitive intelligence for Shopify brands. https://rivaldrop.com
+- **Anvilshare** - replaces costly SaaS with AI-native alternatives, starting with HVAC and home services. https://anvilshare.ai
+
+## Who runs it
+Simon L. Paige (sole member). Based in Kansas City, Missouri.
+
+## Contact
+- Email: simon@groundlayer.co
+- Location: Kansas City, MO, USA
+
+## Important pages
+- [Privacy Policy](https://groundlayer.co/privacy.html)
+- [Terms](https://groundlayer.co/terms.html)
+
+## About this file
+This is an llms.txt file - a plain-Markdown summary aimed at AI agents and LLMs. Spec: https://llmstxt.org/
+
+Last updated: 2026-04-26
