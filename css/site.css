@@ -1,6 +1,6 @@
 /* Groundlayer LLC - site.css
    Bedrock flavor. Typography-first. Most restrained brand in the family.
-   Family law: no gradients, no rounded buttons >8px, Inter body, 1.250 scale. */
+   Family law: no gradients, no rounded borders >8px, Inter body, 1.250 scale. */
 
 /* ── Reset ── */
 *, *::before, *::after {
@@ -24,13 +24,13 @@
   --line-height: 1.65;
   --max-width: 960px;
   --max-line: 62ch;
-  --radius: 0px;           /* Groundlayer: structural, no rounding */
+  --radius: 0px;
   --space-unit: 4px;
 }
 
 /* ── Type scale (Major Third 1.250) ── */
 :root {
-  --step-0: 1rem;          /* 16px */
+  --step-0: 1rem;          /* 16px - body */
   --step-1: 1.125rem;      /* 18px - subhead */
   --step-2: 1.25rem;       /* 20px */
   --step-3: 1.563rem;      /* 25px */
@@ -73,12 +73,34 @@ body {
 /* ── Links ── */
 a {
   color: var(--ink);
-  text-decoration: underline;
-  text-underline-offset: 2px;
+  text-decoration: none;
 }
 
 a:hover {
+  text-decoration: underline;
   color: var(--secondary);
+}
+
+/* ── Skip link (WCAG accessibility) ── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  z-index: 100;
+  padding: 12px 24px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  position: fixed;
+  top: 0;
+  left: 0;
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
 }
 
 /* ── Focus (family law: 2px ring, always visible) ── */
@@ -115,10 +137,11 @@ hr {
 .hero h1 {
   font-family: var(--font-body);
   font-weight: 700;
-  font-size: var(--step-5);
+  font-size: 2.4rem;
   line-height: 1.15;
   color: var(--ink);
   margin-bottom: 16px;
+  letter-spacing: -0.01em;
 }
 
 .hero p {
@@ -145,10 +168,6 @@ hr {
   padding-right: 0;
 }
 
-.brand-item:first-child {
-  padding-left: 0;
-}
-
 .brand-item h2 {
   font-family: var(--font-body);
   font-weight: 700;
@@ -167,6 +186,11 @@ hr {
 .brand-item a {
   font-size: var(--step-0);
   color: var(--ink);
+  text-decoration: none;
+}
+
+.brand-item a:hover {
+  text-decoration: underline;
 }
 
 /* ── About ── */
@@ -191,6 +215,11 @@ hr {
 
 .contact a {
   color: var(--ink);
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
 }
 
 /* ── Footer ── */
@@ -205,10 +234,12 @@ hr {
 
 .site-footer a {
   color: var(--secondary);
+  text-decoration: none;
 }
 
 .site-footer a:hover {
   color: var(--ink);
+  text-decoration: underline;
 }
 
 /* ── Legal pages (privacy, terms) ── */
@@ -256,6 +287,12 @@ hr {
 
 .legal-page a {
   color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.legal-page a:hover {
+  color: var(--secondary);
 }
 
 .legal-back {
@@ -263,10 +300,12 @@ hr {
   margin-bottom: 32px;
   font-size: 0.875rem;
   color: var(--secondary);
+  text-decoration: none;
 }
 
 .legal-back:hover {
   color: var(--ink);
+  text-decoration: underline;
 }
 
 /* ── Responsive ── */
@@ -288,6 +327,14 @@ hr {
   .hero h1 {
     font-size: var(--step-4);
   }
+
+  .site-header {
+    padding: 32px 0 0;
+  }
+
+  .site-header .logo {
+    max-width: 180px;
+  }
 }
 
 /* ── Print ── */
@@ -306,7 +353,7 @@ hr {
 
   a {
     color: #000;
-    text-decoration: none;
+    text-decoration: underline;
   }
 
   a[href]::after {
